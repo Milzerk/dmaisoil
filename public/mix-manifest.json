@@ -1,0 +1,12 @@
+{
+    "/css/styles.css": "/css/styles.css",
+    "/css/login.css": "/css/login.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/scripts/jquery.min.js": "/scripts/jquery.min.js",
+    "/scripts/jquery.slim.min.js": "/scripts/jquery.slim.min.js",
+    "/scripts/bootstrap.bundle.min.js": "/scripts/bootstrap.bundle.min.js",
+    "/scripts/all.min.js": "/scripts/all.min.js",
+    "/scripts/jqBootstrapValidation.js": "/scripts/jqBootstrapValidation.js",
+    "/scripts/contact_me.js": "/scripts/contact_me.js",
+    "/scripts/scripts.js": "/scripts/scripts.js"
+}
