@@ -20,6 +20,8 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.14.0",
+        "animate.css": "^4.1.0",
+        "chartist": "^0.11.4",
         "jquery": "^3.5.1",
         "startbootstrap-agency": "^6.0.2"
     }

@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('dashboard.login');
 })->name('login');
+
+Route::post('/dashboard', function() {
+    return view('dashboard.index');
+})->name('dashboard.index');

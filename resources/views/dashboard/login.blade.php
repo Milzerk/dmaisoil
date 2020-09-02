@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D+ Oil Change</title>
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('auth/css/login.css') }}" rel="stylesheet" />
+    <link href="{{ asset('auth/css/bootstrap.min.css') }}" rel="stylesheet" />
 </head>
 <body>   
     <div class="container-fluid">
@@ -17,25 +17,26 @@
             <div class="container">
                 <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">Welcome back!</h3>
-                    <form>
+                    <h3 class="login-heading mb-4">Bem Vindo de volta!</h3>
+                    <form method="POST" action="{{ route('dashboard.index') }}">
+                    @csrf
                     <div class="form-label-group">
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
+                        <label for="inputEmail">Email</label>
                     </div>
     
                     <div class="form-label-group">
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
+                        <label for="inputPassword">Senha</label>
                     </div>
     
                     <div class="custom-control custom-checkbox mb-3">
                         <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        <label class="custom-control-label" for="customCheck1">Lembre-se de mim.</label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Entrar</button>
                     <div class="text-center">
-                        <a class="small" href="#">Forgot password?</a></div>
+                        <a class="small" href="#">Esqueceu sua senha?</a></div>
                     </form>
                 </div>
                 </div>
@@ -44,8 +45,8 @@
         </div>
         </div>
     </div>
-    <script src="{{ asset('scripts/jquery.min.js') }}"></script>
-    <script src="{{ asset('scripts/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('auth/scripts/jquery.min.js') }}"></script>
+    <script src="{{ asset('auth/scripts/bootstrap.bundle.min.js') }}"></script>
 
     </body>
 </html>

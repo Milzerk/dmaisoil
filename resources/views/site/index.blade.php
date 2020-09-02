@@ -6,21 +6,21 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>D+ Oil Change</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('site/assets/img/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
-        <script src="{{ asset('scripts/all.min.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('site/scripts/all.min.js') }}" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+        <link href="{{ asset('site/css/styles.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ asset('assets/img/navbar-logo.svg') }}" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ asset('site/assets/img/navbar-logo.svg') }}" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -125,7 +125,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/01-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/01-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Threads</div>
@@ -139,7 +139,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/02-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/02-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Explore</div>
@@ -153,7 +153,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/03-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/03-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Finish</div>
@@ -167,7 +167,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/04-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/04-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Lines</div>
@@ -181,7 +181,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/05-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/05-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Southwest</div>
@@ -195,7 +195,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ asset('assets/img/portfolio/06-thumbnail.jpg') }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('site/assets/img/portfolio/06-thumbnail.jpg') }}" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Window</div>
@@ -215,7 +215,7 @@
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('assets/img/about/1.jpg') }}" alt="" /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('site/assets/img/about/1.jpg') }}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
@@ -225,7 +225,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('assets/img/about/2.jpg') }}" alt="" /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('site/assets/img/about/2.jpg') }}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>March 2011</h4>
@@ -235,7 +235,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('assets/img/about/3.jpg') }}" alt="" /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('site/assets/img/about/3.jpg') }}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>December 2012</h4>
@@ -245,7 +245,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('assets/img/about/4.jpg') }}" alt="" /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('site/assets/img/about/4.jpg') }}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>July 2014</h4>
@@ -278,7 +278,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ asset('assets/img/team/1.jpg') }}" alt="" />
+                            <img class="mx-auto rounded-circle" src="{{ asset('site/assets/img/team/1.jpg') }}" alt="" />
                             <h4>Kay Garland</h4>
                             <p class="text-muted">Lead Designer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -288,7 +288,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ asset('assets/img/team/2.jpg') }}" alt="" />
+                            <img class="mx-auto rounded-circle" src="{{ asset('site/assets/img/team/2.jpg') }}" alt="" />
                             <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Marketer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -298,7 +298,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ asset('assets/img/team/3.jpg') }}" alt="" />
+                            <img class="mx-auto rounded-circle" src="{{ asset('site/assets/img/team/3.jpg') }}" alt="" />
                             <h4>Diana Petersen</h4>
                             <p class="text-muted">Lead Developer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -317,16 +317,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/logos/envato.jpg') }}" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/logos/envato.jpg') }}" alt="" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/logos/designmodo.jpg') }}" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/logos/designmodo.jpg') }}" alt="" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/logos/themeforest.jpg') }}" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/logos/themeforest.jpg') }}" alt="" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/logos/creative-market.jpg') }}" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/logos/creative-market.jpg') }}" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -390,7 +390,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -398,7 +398,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/01-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/01-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -420,7 +420,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -428,7 +428,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/02-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/02-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -450,7 +450,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -458,7 +458,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/03-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/03-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -480,7 +480,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -488,7 +488,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/04-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/04-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -510,7 +510,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -518,7 +518,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/05-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/05-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -540,7 +540,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('assets/img/close-icon.svg') }}" alt="Close modal" /></div>
+                    <div class="close-modal" data-dismiss="modal"><img src="{{ asset('site/assets/img/close-icon.svg') }}" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -548,7 +548,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ asset('assets/img/portfolio/06-full.jpg') }}" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="{{ asset('site/assets/img/portfolio/06-full.jpg') }}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
@@ -567,14 +567,14 @@
             </div>
         </div>
         <!-- Bootstrap core JS-->
-        <script src="{{ asset('scripts/jquery.min.js') }}"></script>
-        <script src="{{ asset('scripts/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('site/scripts/jquery.min.js') }}"></script>
+        <script src="{{ asset('site/scripts/bootstrap.bundle.min.js') }}"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->
-        <script src="{{ asset('scripts/jqBootstrapValidation.js') }}"></script>
-        <script src="{{ asset('scripts/contact_me.js') }}"></script>
+        <script src="{{ asset('site/scripts/jqBootstrapValidation.js') }}"></script>
+        <script src="{{ asset('site/scripts/contact_me.js') }}"></script>
         <!-- Core theme JS-->
-        <script src="{{ asset('scripts/scripts.js') }}"></script>
+        <script src="{{ asset('site/scripts/scripts.js') }}"></script>
     </body>
 </html>
