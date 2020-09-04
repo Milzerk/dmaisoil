@@ -35,6 +35,5 @@ Route::get('/dashboard/usuarios', function() {
     return view('dashboard.users');
 })->name('dashboard.users');
 
-Route::get('/dashboard/novo-usuario', function() {
-    return view('dashboard.createUsers');
-})->name('dashboard.createUsers');
+Route::get('/dashboard/novo-usuario', 'Dashboard\AuthController@showRegisterForm')->name('registerUser');
+Route::post('/dashboard/novo-usuario/do', 'Dashboard\AuthController@register')->name('registerUser.do');

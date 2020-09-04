@@ -8,18 +8,21 @@
             <h4 class="title">Novo Usuário</h4>
         </div>
         <div class="content">
-            <form>
+            <form action="{{ route('registerUser.do') }}" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Usuario</label>
-                            <input type="user" class="form-control" placeholder="Nome de Usuario">
+                            <input type="user" name="user" value="{{ old('user') }}"  class="form-control " placeholder="Nome de Usuario" required>
+                            @error('user') <p class="small text-danger">{{$errors->first('user')}}</p> @enderror
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email" required>
+                            @error('email') <p class="small text-danger">{{$errors->first('email')}}</p> @enderror
                         </div>
                     </div>
                 </div>
@@ -28,19 +31,21 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome">
+                            <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Nome" required>
+                            @error('name') <p class="small text-danger">{{$errors->first('name')}}</p> @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="text" class="form-control" placeholder="Senha">
+                            <input type="text" name="password" class="form-control" placeholder="Senha" required>
+                            @error('password') <p class="small text-danger">{{$errors->first('password')}}</p> @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Repetir Senha</label>
-                            <input type="text" class="form-control" placeholder="Repetir Senha">
+                            <input type="text" name="password_confirmation" class="form-control" placeholder="Repetir Senha" required>
                         </div>
                     </div>
                 </div>
