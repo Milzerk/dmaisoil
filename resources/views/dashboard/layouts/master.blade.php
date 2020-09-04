@@ -39,14 +39,14 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="{{ route('dashboard.index') }}" class="simple-text">
                     Creative Tim
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="{{ route('dashboard.users') }}">
                         <i class="pe-7s-users"></i>
                         <p>Usuarios</p>
                     </a>
@@ -80,7 +80,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="">
+                            <a href="{{ route('dashboard.account') }}">
                                 Perfil
                              </a>
                         </li>

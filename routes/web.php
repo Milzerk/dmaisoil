@@ -13,14 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* rotas do site */
 Route::get('/', function () {
     return view('site.index');
 })->name('site.index');
 
-Route::get('/login', function () {
-    return view('dashboard.login');
-})->name('login');
+/* Rotas do Login*/
+Route::get('/login', 'Dashboard\AuthController@showLoginForm')->name('login');
+Route::post('/login/do', 'Dashboard\AuthController@login')->name('login.do');
 
-Route::post('/dashboard', function() {
+/* Rotas do Dashboard */
+Route::get('/dashboard', function() {
     return view('dashboard.index');
 })->name('dashboard.index');
+
+Route::get('/dashboard/perfil', function() {
+    return view('dashboard.account');
+})->name('dashboard.account');
+
+Route::get('/dashboard/usuarios', function() {
+    return view('dashboard.users');
+})->name('dashboard.users');
+
+Route::get('/dashboard/novo-usuario', function() {
+    return view('dashboard.createUsers');
+})->name('dashboard.createUsers');
