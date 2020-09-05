@@ -62,7 +62,7 @@
         <div class="content">
             <div class="author">
                     <a href="#">
-                <img class="avatar border-gray" src="{{ asset('dash/assets/img/faces/face-6.jpg') }}" alt="...">
+                <img class="avatar border-gray" src="{{ asset('dash/assets/img/faces/face-0.jpg') }}" alt="...">
 
                     <h4 class="title">Mike Andrew<br>
                         <small>michael24@mail.com</small>
