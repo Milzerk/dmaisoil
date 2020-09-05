@@ -14,7 +14,7 @@ return [
     */
 
     'confirmed' => 'O campo :attribute não confere.',
-    'email' => 'O campo :attribute deve ser um endereço de email válido',
+    'email' => 'O campo :attribute deve ser um endereço de email válido.',
     'max' => [
         'numeric' => 'O :attribute não deve ser maior que :max.',
         'string' => 'O campo :attribute não deve conter mais que :max caracteres.',
@@ -22,6 +22,7 @@ return [
     'min' => [
         'string' => 'O campo :attribute não deve conter menos que :min caracteres.',
     ],
+    'no_space' => 'O campo :attribute não deve conter espaço.',
     'required' => 'O campo :attribute é requerido.',
     'string' => 'O :attribute deve se um texto.',
     'unique' => 'O :attribute já esta cadastrado.',

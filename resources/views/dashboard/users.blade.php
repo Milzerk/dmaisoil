@@ -1,4 +1,7 @@
 @extends('dashboard.layouts.master')
+@section('nav.user')
+    active
+@endsection
 
 @section('content')
 
@@ -33,12 +36,10 @@
                             <td>{{$user->user}}</td>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
-                            <td><input type="checkbox" class="custom-control-input" id="customSwitches"></td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>

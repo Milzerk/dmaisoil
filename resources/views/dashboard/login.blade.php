@@ -17,17 +17,24 @@
             <div class="container">
                 <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto">
+                    @error('auth')
+                        <div class="alert alert-danger">
+                            <span>{{$errors->first('auth')}}</span>
+                        </div>
+                    @enderror
                     <h3 class="login-heading mb-4">Bem Vindo de volta!</h3>
                     <form method="POST" action="{{ route('login.do') }}">
                     @csrf
                     <div class="form-label-group">
-                        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email</label>
+                        <input type="text" id="user" name="user" class="form-control @error('user') is-invalid @enderror" placeholder="Usuário"  autofocus>
+                        <label for="user">Usuário</label>
+                        @error('user') <p class="small text-danger">{{$errors->first('user')}}</p> @enderror
                     </div>
     
                     <div class="form-label-group">
-                        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                        <input type="password" id="inputPassword" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Senha" >
                         <label for="inputPassword">Senha</label>
+                        @error('password') <p class="small text-danger">{{$errors->first('password')}}</p> @enderror
                     </div>
     
                     <div class="custom-control custom-checkbox mb-3">

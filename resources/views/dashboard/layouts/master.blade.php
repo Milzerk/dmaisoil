@@ -45,7 +45,7 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li class="@yield('nav.user')">
                     <a href="{{ route('dashboard.users') }}">
                         <i class="pe-7s-id"></i>
                         <p>Usuarios</p>
@@ -103,9 +103,10 @@
                              </a>
                         </li>
                         <li>
-                           <a href="">
-                               Sair
-                            </a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Sair
+                              </a>
                         </li>
                     </ul>
                 </div>
@@ -141,6 +142,24 @@
     </div>
 </div>
 
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title pull-left" id="exampleModalLabel">Deseja Sair?</h5>
+              <button class="close pull-right" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body"> Selecione "Sair" se você realmente deseja finalizar esta sessão.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>            
+              <a type="button" class="btn btn-primary" href="{{ route('logout') }}">Sair</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </body>
     <!--   Core JS Files   -->

@@ -21,17 +21,20 @@ Route::get('/', function () {
 /* Rotas do Login*/
 Route::get('/login', 'Dashboard\AuthController@showLoginForm')->name('login');
 Route::post('/login/do', 'Dashboard\AuthController@login')->name('login.do');
+Route::get('/logout', 'Dashboard\AuthController@logout')->name('logout');
 
 /* Rotas do Dashboard */
-Route::get('/dashboard', function() {
-    return view('dashboard.index');
-})->name('dashboard.index');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function() {
+        return view('dashboard.index');
+    })->name('dashboard.index');
 
-Route::get('/dashboard/perfil', function() {
-    return view('dashboard.account');
-})->name('dashboard.account');
+    Route::get('/dashboard/perfil', function() {
+        return view('dashboard.account');
+    })->name('dashboard.account');
 
 
-Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
-Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
-Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');
+    Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
+    Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
+    Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');
+});

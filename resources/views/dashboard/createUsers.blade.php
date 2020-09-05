@@ -1,4 +1,7 @@
 @extends('dashboard.layouts.master')
+@section('nav.user')
+    active
+@endsection
 
 @section('content')
 
@@ -38,14 +41,14 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="text" name="password" class="form-control" placeholder="Senha" required>
+                            <input type="password" name="password" class="form-control" placeholder="Senha" required>
                             @error('password') <p class="small text-danger">{{$errors->first('password')}}</p> @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Repetir Senha</label>
-                            <input type="text" name="password_confirmation" class="form-control" placeholder="Repetir Senha" required>
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Repetir Senha" required>
                         </div>
                     </div>
                 </div>
