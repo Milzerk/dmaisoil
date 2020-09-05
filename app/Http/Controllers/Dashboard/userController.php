@@ -37,4 +37,12 @@ class userController extends Controller
         return redirect()->route('dashboard.users', ['success'])->with('success', 'O usuário foi criado com sucesso!');
         ;
     }
+
+    public function account()
+    {
+        $user = auth()->user();
+        return view('dashboard.account', [
+            'user' => $user
+        ]);
+    }
 }

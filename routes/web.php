@@ -29,11 +29,8 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.index');
     })->name('dashboard.index');
 
-    Route::get('/dashboard/perfil', function() {
-        return view('dashboard.account');
-    })->name('dashboard.account');
-
-
+    //rotas de Usuarios
+    Route::get('/dashboard/perfil', 'Dashboard\userController@account')->name('dashboard.account');
     Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
     Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
     Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');

@@ -16,13 +16,13 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Usuario</label>
-                            <input type="user" class="form-control" placeholder="Nome de Usuario" disabled>
+                            <input type="user" class="form-control" value="{{$user->name}}" placeholder="Nome de Usuario" disabled>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" disabled>
+                            <input type="email" class="form-control" value="{{$user->email}}" placeholder="Email" disabled>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome">
+                            <input type="text" class="form-control" value="{{$user->name}}" placeholder="Nome">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -64,8 +64,8 @@
                     <a href="#">
                 <img class="avatar border-gray" src="{{ asset('dash/assets/img/faces/face-0.jpg') }}" alt="...">
 
-                    <h4 class="title">Mike Andrew<br>
-                        <small>michael24@mail.com</small>
+                    <h4 class="title">{{$user->name}}<br>
+                        <small>{{$user->email}}</small>
                     </h4>
                 </a>
             </div>
