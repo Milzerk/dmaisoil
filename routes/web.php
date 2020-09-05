@@ -31,9 +31,7 @@ Route::get('/dashboard/perfil', function() {
     return view('dashboard.account');
 })->name('dashboard.account');
 
-Route::get('/dashboard/usuarios', function() {
-    return view('dashboard.users');
-})->name('dashboard.users');
 
-Route::get('/dashboard/novo-usuario', 'Dashboard\AuthController@showRegisterForm')->name('registerUser');
-Route::post('/dashboard/novo-usuario/do', 'Dashboard\AuthController@register')->name('registerUser.do');
+Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
+Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
+Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');

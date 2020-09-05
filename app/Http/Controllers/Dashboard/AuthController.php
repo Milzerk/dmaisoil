@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRegisterRequest;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -16,15 +18,5 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         return redirect()->route('dashboard.index');
-    }
-
-    public function showRegisterForm()
-    {
-        return view('dashboard.createUsers');
-    }
-
-    public function register(UserRegisterRequest $request) {
-        $validated = $request->validated();
-        dd($validated);
     }
 }

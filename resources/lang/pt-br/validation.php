@@ -24,6 +24,7 @@ return [
     ],
     'required' => 'O campo :attribute é requerido.',
     'string' => 'O :attribute deve se um texto.',
+    'unique' => 'O :attribute já esta cadastrado.',
 
     /*
     |--------------------------------------------------------------------------

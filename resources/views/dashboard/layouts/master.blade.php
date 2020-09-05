@@ -40,15 +40,33 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="{{ route('dashboard.index') }}" class="simple-text">
-                    Creative Tim
+                    D+ Oil Change
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
                     <a href="{{ route('dashboard.users') }}">
-                        <i class="pe-7s-users"></i>
+                        <i class="pe-7s-id"></i>
                         <p>Usuarios</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('dashboard.users') }}">
+                        <i class="pe-7s-users"></i>
+                        <p>Clientes</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('dashboard.users') }}">
+                        <i class="pe-7s-mail"></i>
+                        <p>E-mails</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('dashboard.users') }}">
+                        <i class="pe-7s-diamond"></i>
+                        <p>Pontos e prêmios</p>
                     </a>
                 </li>
 
@@ -140,5 +158,6 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="{{ asset('dash/scripts/light-bootstrap-dashboard.js') }}"></script>
+    <script src="{{ asset('dash/scripts/light-bootstrap-dashboard.js') }}"></script>
+    @yield('scripts')
 </html>

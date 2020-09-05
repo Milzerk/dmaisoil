@@ -1,6 +1,15 @@
 @extends('dashboard.layouts.master')
 
 @section('content')
+
+@if (session('success'))
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-success ">
+        <span><b>{{ session('success') }}</b></span>
+    </div>  
+</div>
+@endif
+
 <div class="col-md-10 col-md-offset-1">
     <div class="card">
         <div class="header">
@@ -18,42 +27,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Dakota Rice</td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Doris Greene</td>
-                        <td>$63,542</td>
-                        <td>Malawi</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Mason Porter</td>
-                        <td>$78,615</td>
-                        <td>Chile</td>
-                    </tr>
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{$user->id}}</td>
+                            <td>{{$user->user}}</td>
+                            <td>{{$user->name}}</td>
+                            <td>{{$user->email}}</td>
+                            <td><input type="checkbox" class="custom-control-input" id="customSwitches"></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
 
