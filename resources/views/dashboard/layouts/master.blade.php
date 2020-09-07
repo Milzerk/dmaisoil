@@ -51,8 +51,8 @@
                         <p>Usuarios</p>
                     </a>
                 </li>
-                <li class="">
-                    <a href="{{ route('dashboard.users') }}">
+                <li class="@yield('nav.client')">
+                    <a href="{{ route('dashboard.clients') }}">
                         <i class="pe-7s-users"></i>
                         <p>Clientes</p>
                     </a>
@@ -84,18 +84,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Usuarios</a>
+                    <a class="navbar-brand">@yield('nav.title')</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                    </ul>
-
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="{{ route('dashboard.account') }}">

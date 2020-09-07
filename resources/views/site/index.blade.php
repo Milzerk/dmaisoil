@@ -48,24 +48,30 @@
                     </div>                    <!-- Signup Form -->
                     <div class="bg-white col-md-3 rounded p-4 m-2" >
                         <div class="form-group text-dark">
-                            <form class="js-validate" action="#" method="GET" novalidate="novalidate">
+                            <form class="js-validate" action="{{ route('registerClient.do') }}" method="POST" novalidate="novalidate">
+                                @csrf
                                 <div class="mb-4">
                                     <h2 class="h4">Fique por dentro de novas promoções!</h2>
                                 </div>
                 
                                 <div class="form-group mb-md-0">
-                                    <input class="form-control" id="name" type="text" placeholder="Nome *" required="required" />
+                                    <input class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" type="text" placeholder="Nome *" required="required" />
                                     <p class="help-block text-danger"></p>
+                                    
+                                </div>
+
+
+                                <div class="form-group mb-md-0">
+                                    <input class="form-control @error('email') is-invalid @enderror" id="Email" name="email" value="{{ old('email') }}" type="text" placeholder="Email *" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                    @error('email') <p class="small text-danger">{{$errors->first('email')}}</p> @enderror
                                 </div>
 
                                 <div class="form-group mb-md-0">
-                                    <input class="form-control" id="Email" type="email" placeholder="Email *" required="required" />
+                                    <input class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone') }}" type="text" placeholder="Telefone *" required="required" />
                                     <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div class="form-group mb-md-0">
-                                    <input class="form-control" id="phone" type="text" placeholder="Telefone *" required="required" />
-                                    <p class="help-block text-danger"></p>
+                                    @error('phone') <p class="small text-danger">{{$errors->first('phone')}}</p> @enderror
+                                
                                 </div>
 
                                 <button type="submit" class="btn btn-block btn-primary">Quero receber promoções</button>

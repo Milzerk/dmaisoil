@@ -34,4 +34,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
     Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
     Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');
+
+    //rotas de Clientes
+    Route::get('/dashboard/clientes', 'Dashboard\clientController@clients')->name('dashboard.clients');
+    Route::get('/dashboard/novo-cliente', 'Dashboard\clientController@showRegisterForm')->name('registerClient');
+    Route::post('/dashboard/novo-cliente/do', 'Dashboard\clientController@register')->name('registerClient.do');
+
 });

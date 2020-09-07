@@ -1,4 +1,7 @@
 @extends('dashboard.layouts.master')
+@section('nav.title')
+    Dashboard
+@endsection
 
 @section('content')
 

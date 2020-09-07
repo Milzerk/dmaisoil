@@ -24,6 +24,7 @@ return [
     ],
     'no_space' => 'O campo :attribute não deve conter espaço.',
     'required' => 'O campo :attribute é requerido.',
+    'required_without' => 'O campo :attribute é requerido quando o campo :values não está preenchido.',
     'string' => 'O :attribute deve se um texto.',
     'unique' => 'O :attribute já esta cadastrado.',
 
@@ -59,6 +60,7 @@ return [
         'name' => 'nome',
         'user' => 'usuário',
         'password' => 'senha',
+        'phone' => 'telefone',
     ],
 
 ];

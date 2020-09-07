@@ -2,6 +2,9 @@
 @section('nav.user')
     active
 @endsection
+@section('nav.title')
+    Usuários
+@endsection
 
 @section('content')
 
@@ -17,7 +20,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Usuario</label>
-                            <input type="user" name="user" value="{{ old('user') }}"  class="form-control " placeholder="Nome de Usuario" required>
+                            <input type="text" name="user" value="{{ old('user') }}"  class="form-control " placeholder="Nome de Usuario" required>
                             @error('user') <p class="small text-danger">{{$errors->first('user')}}</p> @enderror
                         </div>
                     </div>

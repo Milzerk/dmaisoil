@@ -16,7 +16,6 @@ class userController extends Controller
         return view('dashboard.users', [
             'users' => $users
         ]);
-        
     }
 
     public function showRegisterForm()
@@ -35,7 +34,6 @@ class userController extends Controller
         $user->password = Hash::make($validated['password']);
         $user->save(); 
         return redirect()->route('dashboard.users', ['success'])->with('success', 'O usuário foi criado com sucesso!');
-        ;
     }
 
     public function account()

@@ -2,6 +2,9 @@
 @section('nav.user')
     active
 @endsection
+@section('nav.title')
+    Perfil
+@endsection
 
 @section('content')
 
