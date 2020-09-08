@@ -19,5 +19,6 @@
     "/dash/scripts/bootstrap.min.js": "/dash/scripts/bootstrap.min.js",
     "/dash/scripts/chartist.min.js": "/dash/scripts/chartist.min.js",
     "/dash/scripts/bootstrap-notify.js": "/dash/scripts/bootstrap-notify.js",
-    "/dash/scripts/light-bootstrap-dashboard.js": "/dash/scripts/light-bootstrap-dashboard.js"
+    "/dash/scripts/light-bootstrap-dashboard.js": "/dash/scripts/light-bootstrap-dashboard.js",
+    "/dash/scripts/demo.js": "/dash/scripts/demo.js"
 }

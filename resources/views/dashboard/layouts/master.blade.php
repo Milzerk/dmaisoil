@@ -45,6 +45,12 @@
             </div>
 
             <ul class="nav">
+                <li class="@yield('nav.home')">
+                    <a href="{{ route('dashboard.index') }}">
+                        <i class="pe-7s-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
                 <li class="@yield('nav.user')">
                     <a href="{{ route('dashboard.users') }}">
                         <i class="pe-7s-id"></i>
@@ -114,18 +120,8 @@
 
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                <p class="copyright pull-left">
+                    Copyright &copy; <a href="{{ route('site.index') }}">D+ Oil Change</a> {{ date('Y') }}
                 </p>
             </div>
         </footer>

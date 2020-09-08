@@ -20,18 +20,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ asset('site/assets/img/navbar-logo.svg') }}" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">D+ Oil Change</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">História</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Quem Somos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contato</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Login</a></li>
                     </ul>
                 </div>
@@ -42,9 +42,8 @@
             <div>
                 <div class="row m-0">
                     <div class="col-md-8 m-2">
-                        <div class="masthead-subheading">Welcome To Our Studio!</div>
-                        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                        <div class="masthead-subheading">Progrma de fidelidade com prêmios incriveis.</div>
+                        <div class="masthead-heading text-uppercase">Venha Trocar seu óleo conosco</div>
                     </div>                    <!-- Signup Form -->
                     <div class="bg-white col-md-3 rounded p-4 m-2" >
                         <div class="form-group text-dark">
@@ -378,15 +377,11 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
+                    <div class="col-lg-4 text-lg-left">Copyright &copy; D+ Oil Change {{ date('Y') }}</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-right">
-                        <a class="mr-3" href="#!">Privacy Policy</a>
-                        <a href="#!">Terms of Use</a>
                     </div>
                 </div>
             </div>
@@ -582,5 +577,25 @@
         <script src="{{ asset('site/scripts/contact_me.js') }}"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('site/scripts/scripts.js') }}"></script>
+        <script src="{{ asset('dash/scripts/bootstrap-notify.js') }}"></script>
+
+        @if (session('success'))
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $.notify({
+                        icon: 'fas fa-thumbs-up',
+                        message: "Cadastrado com sucesso"
+
+                    },{
+                        type: 'info',
+                        timer: 4000,
+                        placement: {
+                            from: 'top',
+                            align: 'center'
+                        }
+                    });
+                });
+            </script>
+        @endif
     </body>
 </html>

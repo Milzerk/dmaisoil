@@ -33,6 +33,9 @@ class clientController extends Controller
         $client->email = $validated['email'];
         $client->phone = $validated['phone'];
         $client->save(); 
-        return redirect()->route('dashboard.clients', ['success'])->with('success', 'O cliente foi cadastrado com sucesso!');
+        
+        return redirect()->back()->with('success', 'Cadastrado com sucesso!');
+
+        //return redirect()->route('dashboard.clients', ['success'])->with('success', 'O cliente foi cadastrado com sucesso!');
     }
 }

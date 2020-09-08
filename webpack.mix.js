@@ -83,4 +83,5 @@ mix
     .scripts('resources/js/dash/bootstrap.min.js', 'public/dash/scripts/bootstrap.min.js')
     .scripts('resources/js/dash/chartist.min.js', 'public/dash/scripts/chartist.min.js')
     .scripts('resources/js/dash/bootstrap-notify.js', 'public/dash/scripts/bootstrap-notify.js')
-    .scripts('resources/js/dash/light-bootstrap-dashboard.js', 'public/dash/scripts/light-bootstrap-dashboard.js');
+    .scripts('resources/js/dash/light-bootstrap-dashboard.js', 'public/dash/scripts/light-bootstrap-dashboard.js')
+    .scripts('resources/js/dash/demo.js', 'public/dash/scripts/demo.js');

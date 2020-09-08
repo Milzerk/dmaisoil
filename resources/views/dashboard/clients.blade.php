@@ -8,14 +8,6 @@
 @endsection
 
 @section('content')
-    
-@if (session('success'))
-<div class="col-md-8 col-md-offset-2">
-    <div class="alert alert-success ">
-        <span><b>{{ session('success') }}</b></span>
-    </div>  
-</div>
-@endif
 
 <div class="col-md-10 col-md-offset-1">
     <div class="card">

@@ -49,5 +49,24 @@
         </div>
     </div>
 </div>
-    
 @endsection
+
+@section('scripts')
+
+@if (session('success'))
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.notify({
+                icon: 'pe-7s-like2',
+                message: " {{ session('success') }}"
+
+            },{
+                type: 'info',
+                timer: 4000
+            });
+        });
+    </script>
+@endif
+
+@endsection
+
