@@ -40,4 +40,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/novo-cliente', 'Dashboard\clientController@showRegisterForm')->name('registerClient');
     Route::post('/dashboard/novo-cliente/do', 'Dashboard\clientController@register')->name('registerClient.do');
 
+    //rotas de Email
+    Route::get('/dashboard/emails', function () {
+        return view('dashboard.emails');
+    })->name('dashboard.emails');
+
+    //rotas de Pontos
+    Route::get('/dashboard/pontos', function () {
+        return view('dashboard.rewards');
+    })->name('dashboard.rewards');
 });

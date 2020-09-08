@@ -63,14 +63,14 @@
                         <p>Clientes</p>
                     </a>
                 </li>
-                <li class="">
-                    <a href="{{ route('dashboard.users') }}">
+                <li class="@yield('nav.emails')">
+                    <a href="{{ route('dashboard.emails') }}">
                         <i class="pe-7s-mail"></i>
                         <p>E-mails</p>
                     </a>
                 </li>
-                <li class="">
-                    <a href="{{ route('dashboard.users') }}">
+                <li class="@yield('nav.rewards')">
+                    <a href="{{ route('dashboard.rewards') }}">
                         <i class="pe-7s-diamond"></i>
                         <p>Pontos e prêmios</p>
                     </a>
