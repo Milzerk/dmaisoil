@@ -39,6 +39,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/clientes', 'Dashboard\clientController@clients')->name('dashboard.clients');
     Route::get('/dashboard/novo-cliente', 'Dashboard\clientController@showRegisterForm')->name('registerClient');
     Route::post('/dashboard/novo-cliente/do', 'Dashboard\clientController@register')->name('registerClient.do');
+    Route::get('/dashboard/cliente/{client}', 'Dashboard\clientController@showClient')->name('showClient');
+    Route::put('/dashboard/cliente/{client}/do', 'Dashboard\clientController@update')->name('updateClient.do');
 
     //rotas de Email
     Route::get('/dashboard/emails', function () {
