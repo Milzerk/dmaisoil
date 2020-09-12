@@ -17,7 +17,11 @@
 <div class="col-md-10 col-md-offset-1">
     <div class="card">
         <div class="header">
-            <h4 class="title">Novo Cliente</h4>
+            @if (isset($client))
+                <h4 class="title">Editar Cliente</h4>  
+            @else
+                <h4 class="title">Novo Cliente</h4>            
+            @endif
         </div>
         <div class="content">
             <form action="{{ isset($client) ? route('updateClient.do',  ['client' => $client->id]) : route('registerClient.do') }}" method="POST">
@@ -102,12 +106,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
                         <button type="submit" class="btn btn-info btn-fill pull-right" disabled>Salvar</button>
-                    </div>
                 </form>              
-            </div>    
-            <hr>  
+            </div> 
+            <div class="content">
+                <hr>  
+            </div>  
         </div>
         <div class="header">
             <h4 class="title pull-left">veículos</h4>
