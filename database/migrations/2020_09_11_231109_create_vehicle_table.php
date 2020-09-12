@@ -13,15 +13,15 @@ class CreateVehicleTable extends Migration
      */
     public function up()
     {
-        Schema::create('vehicle', function (Blueprint $table) {
+        Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('client');
             $table->string('license')->nullable();
             $table->string('brand');
             $table->string('model');
             $table->timestamps();
 
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('client')->references('id')->on('clients');
         });
     }
 

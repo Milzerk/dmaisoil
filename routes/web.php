@@ -41,7 +41,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/dashboard/novo-cliente/do', 'Dashboard\clientController@register')->name('registerClient.do');
     Route::get('/dashboard/cliente/{client}', 'Dashboard\clientController@showClient')->name('showClient');
     Route::put('/dashboard/cliente/{client}/do', 'Dashboard\clientController@update')->name('updateClient.do');
-
+    
+    //rotas de Veículos
+    Route::get('/dashboard/veiculos', 'Dashboard\vehicleController@vehicles')->name('dashboard.vehicle');
+    Route::get('/dashboard/novo-veiculo', 'Dashboard\vehicleController@showRegisterForm')->name('registerVehicle');
+    
     //rotas de Email
     Route::get('/dashboard/emails', function () {
         return view('dashboard.emails');
