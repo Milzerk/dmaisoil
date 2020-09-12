@@ -11,7 +11,6 @@ class vehicleController extends Controller
     public function vehicles()
     {
         $vehicles = Vehicle::all();
-        $clients = $vehicles->first()->client()->first();
 
         return view('dashboard.vehicles', [
             'vehicles' => $vehicles,
