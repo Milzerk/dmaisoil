@@ -32,6 +32,7 @@
                             <td>{{$client->name}}</td>
                             <td>{{$client->email}}</td>
                             <td>{{$client->phone}}</td>
+                            <td><a href="{{ route('showClient', ['client' => $client->id]) }}" class="btn btn-sm btn-warning pe-7s-pen btn-fill pull-right"></a></td>
                         </tr>
                     @endforeach
                 </tbody>

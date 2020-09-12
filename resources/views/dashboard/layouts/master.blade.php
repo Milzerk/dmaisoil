@@ -23,12 +23,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('dash/css/pe-icon-7-stroke.css') }}" rel="stylesheet" />
+    @yield('style')
 </head>
 <body>
 
 <div class="wrapper">
     
-    <div class="sidebar" data-color="purple" data-image="{{ asset('dash/assets/img/sidebar-5.jpg') }}">
+    <div class="sidebar" data-color="blue" data-image="{{ asset('dash/assets/img/sidebar-6.jpg') }}">
 
     <!--
 
@@ -108,8 +109,8 @@
                     </ul>
                 </div>
             </div>
-        </nav>   
-        
+        </nav>        
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
