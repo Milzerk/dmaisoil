@@ -42,7 +42,7 @@ class clientController extends Controller
     }
 
     public function showClient(Client $client) {
-        return view('dashboard.createClient', [
+        return view('dashboard.editClient', [
            'client' => $client
        ]); 
     }

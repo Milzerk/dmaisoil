@@ -64,12 +64,6 @@
                         <p>Clientes</p>
                     </a>
                 </li>
-                <li class="@yield('nav.vehicle')">
-                    <a href="{{ route('dashboard.vehicle') }}">
-                        <i class="pe-7s-car"></i>
-                        <p>Veículos</p>
-                    </a>
-                </li>
                 <li class="@yield('nav.emails')">
                     <a href="{{ route('dashboard.emails') }}">
                         <i class="pe-7s-mail"></i>

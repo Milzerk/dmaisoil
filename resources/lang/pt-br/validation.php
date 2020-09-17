@@ -61,6 +61,9 @@ return [
         'user' => 'usuário',
         'password' => 'senha',
         'phone' => 'telefone',
+        'license' => 'placa',
+        'brand' => 'marca',
+        'model' => 'modelo',
     ],
 
 ];

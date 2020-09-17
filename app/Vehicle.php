@@ -9,7 +9,7 @@ class Vehicle extends Model
     protected $Vehicle = 'vehicles';
 
     protected $fillable = [
-        'client_id', 'license', 'brand', 'model'
+        'client', 'license', 'brand', 'model'
     ];
 
     public function Client() {

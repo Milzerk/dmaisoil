@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     //rotas de Veículos
     Route::get('/dashboard/veiculos', 'Dashboard\vehicleController@vehicles')->name('dashboard.vehicle');
     Route::get('/dashboard/novo-veiculo', 'Dashboard\vehicleController@showRegisterForm')->name('registerVehicle');
+    Route::post('/dashboard/novo-veiculo/{client}/do', 'Dashboard\vehicleController@register')->name('registerVehicle.do');
     
     //rotas de Email
     Route::get('/dashboard/emails', function () {
