@@ -36,7 +36,7 @@
                 <h4 class="title">veículos</h4>
             </div>
             <div class="content ">
-                <form action="{{ route('registerVehicle.do', ['client' => $client->id]) }}" method="post">
+                <form action="{{ route('vehicle.store', ['client' => $client->id]) }}" method="post">
                     @csrf
                     <div class="row"> 
                         <div class="col-md-2">

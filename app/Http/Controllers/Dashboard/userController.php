@@ -8,9 +8,14 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class userController extends Controller
+class UserController extends Controller
 {
-    public function users()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
         $users = User::all();
         return view('dashboard.users', [
@@ -18,12 +23,32 @@ class userController extends Controller
         ]);
     }
 
-    public function showRegisterForm()
+    public function account()
     {
-        return view('dashboard.createUsers');
+        $user = auth()->user();
+        return view('dashboard.account', [
+            'user' => $user
+        ]);
     }
 
-    public function register(UserRegisterRequest $request) {
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('dashboard.formUsers');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(UserRegisterRequest $request)
+    {
         $validated = $request->validated();
         
     
@@ -33,14 +58,51 @@ class userController extends Controller
         $user->email = $validated['email'];
         $user->password = Hash::make($validated['password']);
         $user->save(); 
-        return redirect()->route('dashboard.users', ['success'])->with('success', 'O usuário foi criado com sucesso!');
+        return redirect()->route('user.index', ['success'])->with('success', 'O usuário foi criado com sucesso!');
     }
 
-    public function account()
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function show(User $user)
     {
-        $user = auth()->user();
-        return view('dashboard.account', [
-            'user' => $user
-        ]);
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, User $user)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
+    {
+        //
     }
 }

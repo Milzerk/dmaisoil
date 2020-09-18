@@ -25,7 +25,7 @@
                     <div class="col-md-8">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" value="{{$user->email}}" placeholder="Email" disabled>
+                            <input type="email" class="form-control" value="{{$user->email}}" placeholder="Email">
                         </div>
                     </div>
                 </div>

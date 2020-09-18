@@ -6,24 +6,39 @@ use App\Client;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientRegisterRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
-class clientController extends Controller
+class ClientController extends Controller
 {
-    public function clients()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
         $clients = Client::all();
-         return view('dashboard.clients', [
-            'clients' => $clients
-        ]); 
+        return view('dashboard.clients', [
+           'clients' => $clients
+       ]); 
     }
 
-    public function showRegisterForm()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        return view ('dashboard.createClient');
+        return view ('dashboard.formClient');
     }
 
-    public function register(ClientRegisterRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(ClientRegisterRequest $request)
     {
         $validated = $request->validated();
         
@@ -38,15 +53,41 @@ class clientController extends Controller
 
         //return redirect()->back()->with('success', 'Cadastrado com sucesso!');
 
-        return redirect()->route('showClient', ['client' => $client])->with('success', 'O cliente foi cadastrado com sucesso!');
+        return redirect()->route('client.show', ['client' => $client])->with('success', 'O cliente foi cadastrado com sucesso!');
+
     }
 
-    public function showClient(Client $client) {
-        return view('dashboard.editClient', [
-           'client' => $client
-       ]); 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Client  $client
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Client $client)
+    {
+        return view('dashboard.showClient', [
+            'client' => $client
+        ]); 
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Client  $client
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Client $client)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Client  $client
+     * @return \Illuminate\Http\Response
+     */
     public function update(ClientRegisterRequest $request, Client $client)
     {
         $validated = $request->validated();
@@ -57,5 +98,16 @@ class clientController extends Controller
         $client->save(); 
 
         return redirect()->back()->with('success', 'Alterado com sucesso!');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Client  $client
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Client $client)
+    {
+        //
     }
 }

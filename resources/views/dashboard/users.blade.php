@@ -20,7 +20,7 @@
     <div class="card">
         <div class="header">
             <h4 class="title pull-left">Usuários</h4>
-            <a href="{{ route('registerUser') }}" class="btn btn-info btn-fill pull-right">Novo Usuário</a>
+            <a href="{{ route('user.create') }}" class="btn btn-info btn-fill pull-right">Novo Usuário</a>
         </div>
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">

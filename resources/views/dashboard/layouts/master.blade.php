@@ -53,13 +53,13 @@
                     </a>
                 </li>
                 <li class="@yield('nav.user')">
-                    <a href="{{ route('dashboard.users') }}">
+                    <a href="{{ route('user.index') }}">
                         <i class="pe-7s-id"></i>
                         <p>Usuarios</p>
                     </a>
                 </li>
                 <li class="@yield('nav.client')">
-                    <a href="{{ route('dashboard.clients') }}">
+                    <a href="{{ route('client.index') }}">
                         <i class="pe-7s-users"></i>
                         <p>Clientes</p>
                     </a>
@@ -96,7 +96,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="{{ route('dashboard.account') }}">
+                            <a href="{{ route('user.account') }}">
                                 Perfil
                              </a>
                         </li>

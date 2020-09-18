@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* rotas do site */
-Route::get('/', function () {
+Route::get('/', function(){
     return view('site.index');
 })->name('site.index');
 
@@ -23,30 +23,23 @@ Route::get('/login', 'Dashboard\AuthController@showLoginForm')->name('login');
 Route::post('/login/do', 'Dashboard\AuthController@login')->name('login.do');
 Route::get('/logout', 'Dashboard\AuthController@logout')->name('logout');
 
-/* Rotas do Dashboard */
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function() {
         return view('dashboard.index');
     })->name('dashboard.index');
 
-    //rotas de Usuarios
-    Route::get('/dashboard/perfil', 'Dashboard\userController@account')->name('dashboard.account');
-    Route::get('/dashboard/usuarios', 'Dashboard\userController@users')->name('dashboard.users');
-    Route::get('/dashboard/novo-usuario', 'Dashboard\userController@showRegisterForm')->name('registerUser');
-    Route::post('/dashboard/novo-usuario/do', 'Dashboard\userController@register')->name('registerUser.do');
 
-    //rotas de Clientes
-    Route::get('/dashboard/clientes', 'Dashboard\clientController@clients')->name('dashboard.clients');
-    Route::get('/dashboard/novo-cliente', 'Dashboard\clientController@showRegisterForm')->name('registerClient');
-    Route::post('/dashboard/novo-cliente/do', 'Dashboard\clientController@register')->name('registerClient.do');
-    Route::get('/dashboard/cliente/{client}', 'Dashboard\clientController@showClient')->name('showClient');
-    Route::put('/dashboard/cliente/{client}/do', 'Dashboard\clientController@update')->name('updateClient.do');
+    //rotas de usuário
+    Route::get('/dashboard/perfil', 'Dashboard\UserController@account')->name('user.account');
+    Route::resource('/dashboard/usuarios', 'Dashboard\UserController')->names('user')->parameters(['usuarios' => 'user']);
     
-    //rotas de Veículos
-    Route::get('/dashboard/veiculos', 'Dashboard\vehicleController@vehicles')->name('dashboard.vehicle');
-    Route::get('/dashboard/novo-veiculo', 'Dashboard\vehicleController@showRegisterForm')->name('registerVehicle');
-    Route::post('/dashboard/novo-veiculo/{client}/do', 'Dashboard\vehicleController@register')->name('registerVehicle.do');
+    //rotas de clientes
+    Route::resource('/dashboard/clientes', 'Dashboard\ClientController')->names('client')->parameters(['clientes' => 'client']);
     
+    //rotas de Veiculos
+    Route::post('/dashboard/veiculos/{client}', 'Dashboard\VehicleController@store')->name('vehicle.store');
+    Route::resource('/dashboard/veiculos', 'Dashboard\VehicleController')->names('vehicle')->parameters(['veiculos' => 'vehicle'])->except(['store',]);;
+
     //rotas de Email
     Route::get('/dashboard/emails', function () {
         return view('dashboard.emails');

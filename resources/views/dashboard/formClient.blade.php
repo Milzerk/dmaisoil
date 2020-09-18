@@ -24,7 +24,7 @@
             @endif
         </div>
         <div class="content">
-            <form action="{{ isset($client) ? route('updateClient.do',  ['client' => $client->id]) : route('registerClient.do') }}" method="POST">
+            <form action="{{ isset($client) ? route('updateClient.do',  ['client' => $client->id]) : route('client.store') }}" method="POST">
                 @isset($client)
                     @method("put")
                 @endisset

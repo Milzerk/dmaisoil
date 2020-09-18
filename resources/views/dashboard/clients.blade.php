@@ -13,7 +13,7 @@
     <div class="card">
         <div class="header">
             <h4 class="title pull-left">Clientes</h4>
-            <a href="{{ route('registerClient') }}" class="btn btn-info btn-fill pull-right">Novo Cliente</a>
+            <a href="{{ route('client.create') }}" class="btn btn-info btn-fill pull-right">Novo Cliente</a>
         </div>
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">
@@ -32,7 +32,7 @@
                             <td>{{$client->name}}</td>
                             <td>{{$client->email}}</td>
                             <td>{{$client->phone}}</td>
-                            <td><a href="{{ route('showClient', ['client' => $client->id]) }}" class="btn btn-sm btn-warning pe-7s-pen btn-fill pull-right"></a></td>
+                            <td><a href="{{ route('client.show', ['client' => $client->id]) }}" class="btn btn-sm btn-warning pe-7s-pen btn-fill pull-right"></a></td>
                         </tr>
                     @endforeach
                 </tbody>

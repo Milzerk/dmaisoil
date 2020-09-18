@@ -14,7 +14,7 @@
             <h4 class="title">Novo Usuário</h4>
         </div>
         <div class="content">
-            <form action="{{ route('registerUser.do') }}" method="POST">
+            <form action="{{ route('user.store') }}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
