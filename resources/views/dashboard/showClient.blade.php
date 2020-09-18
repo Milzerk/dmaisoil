@@ -78,7 +78,7 @@
                         @foreach ($client->vehicles()->get() as $vehicle)
                             <tr>
                                 <td>{{$vehicle->id}}</td>
-                                <td>{{$vehicle->license}}</td>
+                                <td>{{strtoupper($vehicle->license)}}</td>
                                 <td>{{$vehicle->brand}}</td>
                                 <td>{{$vehicle->model}}</td>
                             </tr>                           
