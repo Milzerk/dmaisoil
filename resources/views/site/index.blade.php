@@ -47,7 +47,7 @@
                     </div>                    <!-- Signup Form -->
                     <div class="bg-white col-md-3 rounded p-4 m-2" >
                         <div class="form-group text-dark">
-                            <form class="js-validate" action="{{ route('registerClient.do') }}" method="POST" novalidate="novalidate">
+                            <form class="js-validate" action="{{ route('client.store') }}" method="POST" novalidate="novalidate">
                                 @csrf
                                 <div class="mb-4">
                                     <h2 class="h4">Fique por dentro de novas promoções!</h2>

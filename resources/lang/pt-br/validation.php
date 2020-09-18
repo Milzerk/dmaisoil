@@ -14,6 +14,7 @@ return [
     */
 
     'confirmed' => 'O campo :attribute não confere.',
+    'digits_between' => 'O :attribute deve ter entre :min e :max digitos.',
     'email' => 'O campo :attribute deve ser um endereço de email válido.',
     'max' => [
         'numeric' => 'O :attribute não deve ser maior que :max.',
@@ -27,6 +28,7 @@ return [
     'required_without' => 'O campo :attribute é requerido quando o campo :values não está preenchido.',
     'string' => 'O :attribute deve se um texto.',
     'unique' => 'O :attribute já esta cadastrado.',
+
 
     /*
     |--------------------------------------------------------------------------

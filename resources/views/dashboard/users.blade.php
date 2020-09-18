@@ -8,13 +8,6 @@
 
 @section('content')
 
-@if (session('success'))
-<div class="col-md-8 col-md-offset-2">
-    <div class="alert alert-success ">
-        <span><b>{{ session('success') }}</b></span>
-    </div>  
-</div>
-@endif
 
 <div class="col-md-10 col-md-offset-1">
     <div class="card">
@@ -39,6 +32,7 @@
                             <td>{{$user->user}}</td>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
+                            <td><a href="{{ route('user.edit', ['user' => $user->id]) }}" class="btn btn-sm btn-warning pe-7s-pen btn-fill pull-right"></a></td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -46,4 +40,21 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    @if (session('success'))
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.notify({
+                    icon: 'pe-7s-like2',
+                    message: " {{ session('success') }}"
+
+                },{
+                    type: 'success',
+                    timer: 4000
+                });
+            });
+        </script>
+    @endif
 @endsection

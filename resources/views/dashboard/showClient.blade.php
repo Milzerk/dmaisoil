@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
         <div class="card">
             <div class="header">
                 <h4 class="title">Cliente</h4>
@@ -27,7 +27,7 @@
                         <h5><p class="category">Telefone</p>{{ isset($client) ? $client->phone : "" }}</h4>
                     </div>
                 </div>
-                <a type="button" href="" class="btn btn-info btn-fill pull-right">Editar</a>
+                <a type="button" href="{{ route('client.edit', ['client' => $client->id]) }}" class="btn btn-info btn-fill pull-right">Editar</a>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -42,21 +42,21 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label>Placa</label>
-                                <input type="text" name="license" value="" class="form-control" placeholder="Placa" >
+                                <input type="text" name="license" class="form-control" placeholder="Placa" >
                                 @error('license') <p class="small text-danger">{{$errors->first('license')}}</p> @enderror
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
                                 <label>Marca</label>
-                                <input type="text" name="brand" value=""  class="form-control " placeholder="Marca" >
+                                <input type="text" name="brand"   class="form-control " placeholder="Marca" >
                                 @error('brand') <p class="small text-danger">{{$errors->first('brand')}}</p> @enderror
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
                                 <label>Modelo</label>
-                                <input type="text" name="model" value=""  class="form-control " placeholder="Modelo" >
+                                <input type="text" name="model" class="form-control " placeholder="Modelo" >
                                 @error('model') <p class="small text-danger">{{$errors->first('model')}}</p> @enderror
                             </div>
                         </div>
@@ -88,4 +88,22 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+@if (session('success'))
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.notify({
+                icon: 'pe-7s-like2',
+                message: " {{ session('success') }}"
+
+            },{
+                type: 'success',
+                timer: 4000
+            });
+        });
+    </script>
+@endif
+
 @endsection

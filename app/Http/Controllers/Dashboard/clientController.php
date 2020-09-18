@@ -78,7 +78,9 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view ('dashboard.formClient', [
+            'client' => $client,
+        ]);
     }
 
     /**
@@ -97,7 +99,7 @@ class ClientController extends Controller
         $client->phone = $validated['phone'];
         $client->save(); 
 
-        return redirect()->back()->with('success', 'Alterado com sucesso!');
+        return redirect()->route('client.show', ['client' => $client])->with('success', 'O cliente foi alterado com sucesso!');
     }
 
     /**
