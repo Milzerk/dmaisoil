@@ -1,5 +1,7 @@
 <?php
 
+use App\Jobs\newDmaisOil;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,4 +51,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/pontos', function () {
         return view('dashboard.rewards');
     })->name('dashboard.rewards');
+});
+
+
+Route::get('envio-email', function () {
+    //return new \App\Mail\newDmaisOIl();
+    newDmaisOil::dispatch()->delay(now()->addSeconds(15));
 });

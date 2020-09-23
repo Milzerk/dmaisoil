@@ -85,3 +85,10 @@ mix
     .scripts('resources/js/dash/bootstrap-notify.js', 'public/dash/scripts/bootstrap-notify.js')
     .scripts('resources/js/dash/light-bootstrap-dashboard.js', 'public/dash/scripts/light-bootstrap-dashboard.js')
     .scripts('resources/js/dash/demo.js', 'public/dash/scripts/demo.js');
+
+
+/*----------------Froala Editor--------------------*/
+mix
+    .styles('node_modules/froala-editor/css/froala_editor.pkgd.min.css', 'public/froala/css/froala_editor.pkgd.min.css')
+    .styles('node_modules/froala-editor/js/froala_editor.pkgd.min.js', 'public/froala/scripts/froala_editor.pkgd.min.js')
+    .scripts('node_modules/froala-editor/js/languages/pt_br.js', 'public/froala/scripts/languages/pt_br.js');

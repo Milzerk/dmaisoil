@@ -22,6 +22,7 @@
         "@fortawesome/fontawesome-free": "^5.14.0",
         "animate.css": "^4.1.0",
         "chartist": "^0.11.4",
+        "froala-editor": "^3.2.2",
         "jquery": "^3.5.1",
         "startbootstrap-agency": "^6.0.2"
     }
